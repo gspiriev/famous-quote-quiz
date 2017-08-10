@@ -1,0 +1,11 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="game_text_view_margin">16dp</dimen>
+    <dimen name="game_text_size">24sp</dimen>
+    <dimen name="who_said_it_size">24sp</dimen>
+    <dimen name="settings_view_margin">24dp</dimen>
+    <dimen name="settings_text_size">24sp</dimen>
+    <dimen name="binary_buttons_width">320dp</dimen>
+</resources>
