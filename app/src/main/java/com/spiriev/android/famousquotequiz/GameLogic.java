@@ -1,10 +1,9 @@
 package com.spiriev.android.famousquotequiz;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
+import com.spiriev.android.quiz.dao.DaoApi;
 
 import java.util.ArrayList;
-import java.util.Map;
+import java.util.HashMap;
 
 /**
  * An implementation of GameLogicAPI
@@ -20,12 +19,12 @@ class GameLogic implements GameLogicAPI {
 
     @Override
     public void startGameSession(int modeSelected, BaseGameActivity baseActivity) {
-        Map<String, ArrayList<String>> gameTextData = dao.loadGameData();
-        if (modeSelected == 0){
-            baseActivity.fillBinaryFragmentText();
+        HashMap<String, ArrayList<String>> gameTextData = dao.loadGameData();
+        if (modeSelected == 0) {
+            baseActivity.createBinaryQuestionFragment(gameTextData);
 
-        }else if(modeSelected == 1) {
-            baseActivity.fillMultipleChoiceFragmentText();
+        } else if (modeSelected == 1) {
+            baseActivity.createMultipleChoiceQuestionFragment();
         }
     }
 

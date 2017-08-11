@@ -1,7 +1,7 @@
-package com.spiriev.android.famousquotequiz;
+package com.spiriev.android.quiz.dao;
 
 import java.util.ArrayList;
-import java.util.Map;
+import java.util.HashMap;
 
 /**
  * Manages and loads data objects.
@@ -10,7 +10,8 @@ import java.util.Map;
 public interface DaoApi {
     /**
      * Loads the game data - questions and answers.
+     *
      * @return A map with questions as keys and answers as values
      */
-    Map<String, ArrayList<String>> loadGameData();
+    HashMap<String, ArrayList<String>> loadGameData();
 }
