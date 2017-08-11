@@ -6,7 +6,6 @@ package com.spiriev.android.famousquotequiz;
 
 public interface GameLogicAPI {
     /**
-     * TODO: Document properly
      * Starts the game in the selected mode
      *
      * @param modeSelected Selected mode
@@ -14,7 +13,7 @@ public interface GameLogicAPI {
     void startGameSession(int modeSelected, BaseGameActivity baseActivity);
 
     /**
-     * Restarts the gmae in the selected mode
+     * Restarts the game in the selected mode
      *
      * @param modeSelected Selected mode
      */

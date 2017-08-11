@@ -8,4 +8,6 @@
     <dimen name="settings_view_margin">24dp</dimen>
     <dimen name="settings_text_size">24sp</dimen>
     <dimen name="binary_buttons_width">320dp</dimen>
+    <dimen name="dialog_text_size">24sp</dimen>
+    <dimen name="ok_button_text_size">24sp</dimen>
 </resources>

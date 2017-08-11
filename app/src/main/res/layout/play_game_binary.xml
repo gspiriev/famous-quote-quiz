@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/binary_game_layout">
 
     <TextView
         android:id="@+id/who_said_it"
@@ -10,7 +11,7 @@
         android:layout_margin="@dimen/game_text_view_margin"
         android:text="@string/who_said_it_text"
         android:textSize="@dimen/who_said_it_size" />
-    <!-- TODO: Add style, replace sample text-->
+
     <TextView
         android:id="@+id/game_text_view_binary"
         android:layout_width="match_parent"

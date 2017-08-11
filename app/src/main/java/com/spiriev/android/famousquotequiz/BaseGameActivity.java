@@ -16,6 +16,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Properties;
 
 /**
@@ -136,9 +138,23 @@ public class BaseGameActivity extends Activity implements SettingsFragment.OnDat
      * Replaces a binary question fragment with a new one with a new
      * question.
      */
-    void createBinaryQuestionFragment(HashMap<String, ArrayList<String>> data) {
+    void createBinaryQuestionFragment(HashMap<String, ArrayList<String>> data, Iterator iterator) {
         Bundle bundle = new Bundle();
-        bundle.putSerializable("MAP_DATA", data);
+        String question = null;
+        ArrayList<String> answers = null;
+        if (iterator.hasNext()) {
+            Map.Entry questionPair = (Map.Entry) iterator.next();
+            question = (String) questionPair.getKey();
+            answers = (ArrayList<String>) questionPair.getValue();
+        } else{
+            iterator = data.entrySet().iterator();
+            Map.Entry questionPair = (Map.Entry) iterator.next();
+            question = (String) questionPair.getKey();
+            answers = (ArrayList<String>) questionPair.getValue();
+        }
+
+        bundle.putString("QUESTION", question);
+        bundle.putStringArrayList("ANSWER_LIST", answers);
         playGameBinary.setArguments(bundle);
         mFragmentManager.beginTransaction().replace(R.id.fragment_container, playGameBinary).commit();
     }

@@ -4,6 +4,7 @@ import com.spiriev.android.quiz.dao.DaoApi;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 
 /**
  * An implementation of GameLogicAPI
@@ -21,7 +22,8 @@ class GameLogic implements GameLogicAPI {
     public void startGameSession(int modeSelected, BaseGameActivity baseActivity) {
         HashMap<String, ArrayList<String>> gameTextData = dao.loadGameData();
         if (modeSelected == 0) {
-            baseActivity.createBinaryQuestionFragment(gameTextData);
+            Iterator iterator = gameTextData.entrySet().iterator();
+            baseActivity.createBinaryQuestionFragment(gameTextData, iterator);
 
         } else if (modeSelected == 1) {
             baseActivity.createMultipleChoiceQuestionFragment();

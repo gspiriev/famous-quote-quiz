@@ -57,19 +57,26 @@ public class DaoDatabase implements DaoApi {
         return data;
     }*/
 
-    //TODO: Real SQLite implementation, Right answer index should be 4.
+    //TODO: Real SQLite implementation
     @Override
     public HashMap<String, ArrayList<String>> loadGameData() {
         ArrayList<String> answers = new ArrayList<>();
-        answers.add("Oscar Wilde?");
+        ArrayList<String> moreAnswers = new ArrayList<>();
+        answers.add("Oscar Wilde");
 
         for (int i = 0; i < 3; i++) {
             answers.add("George B. Shaw");
-            i++;
         }
+        answers.add("hint_incorrect");
         answers.add("1");
-        for (int i = 0; i < 10; i++) {
+        moreAnswers.add("Emmanuel Kant");
+        for (int i = 0; i < 3; i++){
+            moreAnswers.add("W.Shakespear");
+        }
+        moreAnswers.add("hint_correct");
+        for (int i = 0; i < 5; i++) {
             gameTextDataTest.put("There is no sincerer love than the love of food.", answers);
+            gameTextDataTest.put("Science is organized knowledge, wisdom is organized life",moreAnswers);
         }
         return gameTextDataTest;
     }

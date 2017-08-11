@@ -7,4 +7,6 @@
     <string name="settings_text">Multiple choice mode</string>
     <string name="yes_button_text">Yes</string>
     <string name="no_button_text">No</string>
+    <string name="dialog_text">Correct!The right answer is...</string>
+    <string name="ok_button_text">OK</string>
 </resources>
